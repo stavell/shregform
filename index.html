@@ -90,7 +90,7 @@
             var displayPilots = function(pilots) {
                 var $pilotsList = $(".pilotsList").find("tbody");
                 $pilotsList.html('');
-                $("[href=#pilots]").find('.badge').text(pilots.length)
+                $("[href=#pilots]").find('.badge').text(pilots.length+' of 50')
                 for(var i in pilots) $pilotsList.append(createPilotRow(pilots[i]));
             }
 
@@ -172,8 +172,10 @@
 
 <div class="tab-pane active" id="pilots">
     <div class="row">
-        <br/>
         <div class="col-sm-offset-2 col-sm-8">
+                <h3>Number of participants allowed: 50</h3>
+
+            <br/>
             <table class="table pilotsList">
                 <thead>
                 <th>#</th>
