@@ -15,4 +15,8 @@ class Shreg {
         return \DB::query("select pilot_number, name, nation, glider, status from pilots order by id");
     }
 
+    public function getRegisteredPilotsDetailed() {
+        return \DB::query("select * from pilots order by id");
+    }
+
 } 
