@@ -39,12 +39,9 @@
                 var $form = $('.application-form').clone();
                 $form.removeClass('application-form');
                 $form.removeClass('hidden');
-
                 for(var i in pilot) $form.find('[name='+i+']').val(pilot[i]);
-
                 return $form
             }
-
 
             Server.call('Shreg.getRegisteredPilotsDetailed',null,function(r) {
                 displayForms(r);
@@ -71,7 +68,7 @@
 <br/>
 <div class="row">
 
-<div class="col-sm-12">
+<div class="col-sm-10">
 
 <form class="form-horizontal" role="form" onsubmit="return false;" id="registrationForm">
 
@@ -99,6 +96,7 @@
 <label for="nation" class="col-sm-3 control-label">Nation</label>
 <div class="col-sm-9">
 <select id="nation" name="nation" class="form-control">
+<option value=""></option>
 <option value="AFG">Afghanistan</option>
 <option value="ALA">Åland Islands</option>
 <option value="ALB">Albania</option>
@@ -417,6 +415,7 @@
     <label for="tshirt_size" class="col-sm-3 control-label">T-shirt size</label>
     <div class="col-sm-9">
         <select id="tshirt_size" name="tshirt_size" class="form-control">
+            <option value=""></option>
             <option value="s">S</option>
             <option value="m">M</option>
             <option value="l">L</option>
@@ -431,6 +430,7 @@
     <label for="lunch_packet" class="col-sm-3 control-label">Desired lunch packet</label>
     <div class="col-sm-9">
         <select id="lunch_packet" name="lunch_packet" class="form-control">
+            <option value=""></option>
             <option value="any">Doesn't matter</option>
             <option value="meat">Meat</option>
             <option value="vegeterian">Vegetarian</option>
@@ -446,6 +446,20 @@
 </div>
 
 <br/>
+<div class="row">
+    <div class="col-xs-12">
+       <div class="well">
+
+        <p>
+            <b>DECLARATION</b>
+            <br/>
+            With the present application form I declare, that I would like to participate in the “Shumen-XC Open 2014”, and I will fly under my own responsibility. Also I declare, that I have the needed knowledge and skills to fly with a paraglider in international competitions, and that my equipment is certified and checked for safety. I carry the whole responsibility for that and I will not make responsible the organization of the event for any injury or fatal accident.
+
+        </p>
+       </div>
+    </div>
+</div>
+
 <div class="row">
     <div class="col-xs-3">
         Date:
